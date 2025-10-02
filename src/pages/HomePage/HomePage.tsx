@@ -23,7 +23,7 @@ export default function HomePage() {
         data-aos-easing="ease-in-sine"
       >
         <h1>اپلیکیشن آب و هوا</h1>
-        <Link to="/projects/weatherapp/search">جست و جو بین شهرها</Link>
+        <Link to="/weatherapp/search">جست و جو بین شهرها</Link>
       </div>
       <div>
         <img src={animationRain} alt="Weather App photo" />

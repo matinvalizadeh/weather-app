@@ -6,7 +6,6 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 // images
-import InfoIcon from "../../assets/img/icons/Info.svg";
 import loadingGif from "../../assets/img/loading.gif";
 
 // styles
@@ -51,10 +50,27 @@ const Search: React.FC = () => {
 
   const dateBuilder = (d: Date) => {
     const months = [
-      "January","February","March","April","May","June","July","August","September","October","November","December",
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
     ];
     const days = [
-      "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday",
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
     ];
 
     const day = days[d.getDay()];
@@ -74,9 +90,6 @@ const Search: React.FC = () => {
       <div className="search-title">
         <h2>نام شهر خود را وارد کنید</h2>
         <p className="tooltip">
-          <div>
-            <img src={InfoIcon} alt="info icon" />
-          </div>
           <span className="tooltiptext">
             در صورت عدم دریافت اطلاعات و بروز خطا لطفا از VPN استفاده کنید.
           </span>

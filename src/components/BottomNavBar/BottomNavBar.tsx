@@ -17,12 +17,12 @@ export default function BottomNavBar() {
 
         <div className="nav-item">
           <img src={SearchIcon} alt="Search Icon" />
-          <Link to="/weatherapp/search">جست و جو</Link>
+          <Link to="/search">جست و جو</Link>
         </div>
 
         <div className="nav-item">
           <img src={HomeIcon} alt="Home Icon" />
-          <Link to="/weatherapp">صفحه اصلی</Link>
+          <Link to="/">صفحه اصلی</Link>
         </div>
       </div>
     </div>

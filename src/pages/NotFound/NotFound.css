@@ -1,0 +1,22 @@
+.notfound-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.notfound-container img.notfound-image {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .notfound-container {
+    height: 80vh;
+  }
+}

@@ -6,13 +6,13 @@ import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 
 // images
-import InfoIcon from "../assets/img/icon/Info.svg";
-import loadingGif from "../assets/img/loading.gif";
+import InfoIcon from "../../assets/img/icons/Info.svg";
+import loadingGif from "../../assets/img/loading.gif";
 
 // styles
 import "./Search.css";
 
-const apiKey = "75b9ff91c1c9b1d204bc50b6ee7bccda";
+const API_KEY = "75b9ff91c1c9b1d204bc50b6ee7bccda";
 
 interface WeatherData {
   data: {
@@ -30,12 +30,12 @@ const Search: React.FC = () => {
   const [apiData, setApiData] = useState<WeatherData | null>(null);
   const [spinner, setSpinner] = useState(false);
 
-  const searchCity = async (e: React.FormEvent) => {
+  const searchCity = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!inputRef.current?.value) return;
 
     setSpinner(true);
-    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${inputRef.current.value}&units=metric&appid=${apiKey}`;
+    const URL = `https://api.openweathermap.org/data/2.5/weather?q=${inputRef.current.value}&units=metric&appid=${API_KEY}`;
 
     try {
       const response = await axios.get(URL);
@@ -45,7 +45,7 @@ const Search: React.FC = () => {
       toast.error(`شهر ${inputRef.current.value} پیدا نشد مجدد تلاش کنید`);
     } finally {
       setSpinner(false);
-      inputRef.current.value = "";
+      if (inputRef.current) inputRef.current.value = "";
     }
   };
 
@@ -78,7 +78,7 @@ const Search: React.FC = () => {
             <img src={InfoIcon} alt="info icon" />
           </div>
           <span className="tooltiptext">
-            در صورت عدم دریافت اطلاعات و بروز خطا لطفا از vpn استفاده کنید.
+            در صورت عدم دریافت اطلاعات و بروز خطا لطفا از VPN استفاده کنید.
           </span>
         </p>
       </div>
@@ -86,10 +86,11 @@ const Search: React.FC = () => {
       <form className="search-box" onSubmit={searchCity}>
         <input
           type="text"
+          className="search-bar"
           placeholder="نام شهر به انگلیسی"
           ref={inputRef}
         />
-        <button type="submit">
+        <button type="submit" className="search-button">
           {spinner ? (
             <>
               <img src={loadingGif} alt="loading gif" /> جست و جو
@@ -116,8 +117,8 @@ const Search: React.FC = () => {
             <p>{apiData.data.weather[0].description}</p>
           </div>
 
-          <div>
-            <p className="temp">{Math.round(apiData.data.main.temp)}°c</p>
+          <div className="data-info">
+            <p className="temp">{Math.round(apiData.data.main.temp)}°C</p>
             <h3>{`${apiData.data.name}, ${apiData.data.sys.country}`}</h3>
             <p>{dateBuilder(new Date())}</p>
           </div>

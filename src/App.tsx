@@ -5,6 +5,7 @@ import "./App.css"
 
 
 // pages
+import BottomNavBar from "./components/BottomNavBar/BottomNavBar";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   return (
         <>
       <div>
+        <BottomNavBar />
         {route}
       </div>
       

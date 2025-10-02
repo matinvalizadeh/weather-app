@@ -1,0 +1,72 @@
+.mobile-navbar-wrapper {
+  position: relative;
+}
+
+/* موج بالا */
+.fixed-shape {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.fixed-shape img {
+  width: 100%;
+  height: 200px;
+}
+
+/* کانتینر نوار پایین */
+.navbar-container {
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 1.7rem 0.5rem;
+  font-size: 1.5rem;
+  background: #f4f4f4;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.navbar-container a {
+  color: #232323;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* آیتم‌های هر گزینه */
+.nav-item {
+  padding: 1rem;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s all linear;
+}
+
+.nav-item:hover {
+  background: #008ae6;
+}
+
+.nav-item:hover a {
+  color: #fff;
+}
+
+.nav-item img {
+  width: 20%;
+  margin-left: 0.2rem;
+}
+
+/* واکنش‌گرا */
+@media screen and (min-width: 768px) {
+  .navbar-container {
+    bottom: 2rem;
+    border-radius: 50px;
+  }
+}

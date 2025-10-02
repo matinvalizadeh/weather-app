@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import useTitle from "../hooks/useTitle";
-import animationRain from "../assets/img/animation-rain.gif";
+import useTitle from "../../hooks/useTitle";
+import animationRain from "../../assets/img/animation-rain.gif";
 import "./HomePage.css";
 
 export default function HomePage() {

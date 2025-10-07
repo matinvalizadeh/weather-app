@@ -25,7 +25,7 @@ It allows users to search for any city and view real-time weather data with a cl
 To run this project locally:
 
 ```bash
-git clone https://github.com/matinvalizadeh/WeatherApp.git
+git clone https://github.com/matinvalizadeh/weather-app.git
 cd WeatherApp
 npm install
 npm start

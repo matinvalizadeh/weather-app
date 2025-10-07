@@ -18,8 +18,7 @@ It allows users to search for any city and view real-time weather data with a cl
 
 ## 🛠 Tech Stack
 - React  
-- TypeScript  
-- Tailwind CSS  
+- TypeScript   
 - OpenWeather API  
 
 ## 🚀 Installation
